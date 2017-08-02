@@ -32,6 +32,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="NBitcoin, Version=4.0.0.3, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NBitcoin.4.0.0.3\lib\net45\NBitcoin.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="QBitNinja.Client, Version=1.0.3.39, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\QBitNinja.Client.1.0.3.39\lib\net45\QBitNinja.Client.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -42,11 +51,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Config.cs" />
+    <Compile Include="FakeData.cs" />
+    <Compile Include="Helpers\PasswordConsole.cs" />
+    <Compile Include="KeyManagement\Hierarchy.cs" />
+    <Compile Include="KeyManagement\Safe.cs" />
+    <Compile Include="KeyManagement\WalletFileSerializer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QBitNinjaJutsus\AddressHistoryRecord.cs" />
+    <Compile Include="QBitNinjaJutsus\QBitNinjaJutsus.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
